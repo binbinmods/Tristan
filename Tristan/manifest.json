@@ -1,8 +1,8 @@
 {
-  "name": "CharacterToReplace_The_SubclassToReplace",
+  "name": "Tristan_The_Owl Knight",
   "version_number": "0.1.0",
-  "website_url": "https://github.com/binbinmods/CharacterToReplace",
-  "description": "New Hero Mod for CharacterToReplace, the SubclassToReplace. A new hero that specializes in x, y, and z",
+  "website_url": "https://github.com/binbinmods/Tristan",
+  "description": "New Hero Mod for Tristan, the Owl Knight. A new hero that specializes in x, y, and z",
   "dependencies": [
     "meds-Obeliskial_Content-1.5.0",
     "meds-Obeliskial_Essentials-1.4.6"

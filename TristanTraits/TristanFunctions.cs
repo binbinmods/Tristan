@@ -5,9 +5,9 @@ using BepInEx.Configuration;
 using HarmonyLib;
 using static Obeliskial_Essentials.Essentials;
 using System;
-using static CharacterToReplace.CustomFunctions;
-using static CharacterToReplace.Plugin;
-using static CharacterToReplace.Traits;
+using static Tristan.CustomFunctions;
+using static Tristan.Plugin;
+using static Tristan.Traits;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -15,7 +15,7 @@ using UnityEngine;
 
 
 // Make sure your namespace is the same everywhere
-namespace CharacterToReplace
+namespace Tristan
 {
 
     // [HarmonyPatch] //DO NOT REMOVE/CHANGE
@@ -28,7 +28,7 @@ namespace CharacterToReplace
         // public static string itemStem = $"{subclassname}";
         public static List<string> cardsWithCustomDescriptions = [];
         public static List<string> cardsToAppendDescription = [];
-        public static List<string> cardsToPrependDescription = ["SubclassToReplaceformulaa", "SubclassToReplaceformulab"];
+        public static List<string> cardsToPrependDescription = ["Owl Knightformulaa", "Owl Knightformulab"];
 
         public static string NumFormatItem(int num, bool plus = false, bool percent = false)
         {

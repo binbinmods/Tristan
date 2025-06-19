@@ -6,10 +6,10 @@ using Obeliskial_Essentials;
 using System.IO;
 using UnityEngine;
 using System;
-using static CharacterToReplace.Traits;
+using static Tristan.Traits;
 using BepInEx.Configuration;
 
-namespace CharacterToReplace
+namespace Tristan
 {
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
     [BepInDependency("com.stiffmeds.obeliskialessentials")]
@@ -24,10 +24,10 @@ namespace CharacterToReplace
         public static ConfigEntry<bool> EnableDebugging { get; set; }
 
 
-        public static string characterName = "CharacterToReplace";
+        public static string characterName = "Tristan";
         public static string heroName = characterName;
 
-        public static string subclassName = "SubclassToReplace"; // needs caps
+        public static string subclassName = "Owlknight"; // needs caps
 
         public static string subclassname = subclassName.ToLower();
         public static string itemStem = subclassname;
@@ -44,11 +44,11 @@ namespace CharacterToReplace
             RegisterMod(
                 _name: PluginInfo.PLUGIN_NAME,
                 _author: "binbin",
-                _description: "Character, the SubclassToReplace.",
+                _description: "Character, the Owl Knight.",
                 _version: PluginInfo.PLUGIN_VERSION,
                 _date: ModDate,
                 _link: @"https://github.com/binbinmods/Character",
-                _contentFolder: "CharacterToReplace",
+                _contentFolder: "Tristan",
                 _type: ["content", "hero", "trait"]
             );
             // apply patches            

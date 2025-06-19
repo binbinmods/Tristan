@@ -1,24 +1,24 @@
-# CharacterToReplace, the SubclassToReplace
+# Tristan, the Owl Knight
 
-A hero mod, introducing CharacterToReplace, a mage/healer who has been trapped in a mental cage. She goes on a journey to break out but has two very different ways of doing so overcoming the issues in a calm and focused way or forcefully breaking out of the cage through sheer will.
+A hero mod, introducing Tristan, a mage/healer who has been trapped in a mental cage. She goes on a journey to break out but has two very different ways of doing so overcoming the issues in a calm and focused way or forcefully breaking out of the cage through sheer will.
 
 This character was designed by @designer.
 
-This currently does not include any events or quests related to CharacterToReplace other than those available to all heroes or all heroes of a specific class.
+This currently does not include any events or quests related to Tristan other than those available to all heroes or all heroes of a specific class.
 
 A couple of notes:
 
 ## Notes:
 
 - I understand that things are going to be janky at times, and there are definitely bugs that will be worked out
-- **What to do if CharacterToReplace is not unlocked:** Due to some jankiness of the way the code works, CharacterToReplace is unlocked only for the profile that is open when you launch the game (and for new profiles). So if they aren't unlocked in the correct profile, switch to that profile, close the game and re-open it and they will be unlocked. I'll fix this in the future, but most people won't notice it. You can also just use the profile editor to fix it.
-- There are **no character events** for CharacterToReplace at this time beyond the ones that are available to all characters of a given class (such as pet trainers or healers being able to remove cards at Rest areas).
+- **What to do if Tristan is not unlocked:** Due to some jankiness of the way the code works, Tristan is unlocked only for the profile that is open when you launch the game (and for new profiles). So if they aren't unlocked in the correct profile, switch to that profile, close the game and re-open it and they will be unlocked. I'll fix this in the future, but most people won't notice it. You can also just use the profile editor to fix it.
+- There are **no character events** for Tristan at this time beyond the ones that are available to all characters of a given class (such as pet trainers or healers being able to remove cards at Rest areas).
 
 This mod relies on [Obeliskial Content](https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/).
 
-## CharacterToReplace Summary
+## Tristan Summary
 
-![Summary](https://raw.githubusercontent.com/binbinmods/CharacterToReplace/refs/heads/main/Assets/CharacterToReplaceSummary.png)
+![Summary](https://raw.githubusercontent.com/binbinmods/Tristan/refs/heads/main/Assets/TristanSummary.png)
 
 ## Installation (manual)
 
@@ -28,7 +28,7 @@ This mod relies on [Obeliskial Content](https://across-the-obelisk.thunderstore.
 4. Extract the archive into the game folder. Your `Across the Obelisk` folder should now contain a `BepInEx` folder and a `doorstop_libs` folder.
 5. Run the game. If everything runs correctly, you will see this mod in the list of registered mods on the main menu.
 6. Press F5 to open/close the Config Manager and F1 to show/hide mod version information.
-7. Note: I am not certain about these install instructions. In the worst case, just copy `com.binbin.CharacterToReplace.dll` into the `BepInEx\plugins` folder, and the _Character_ folder (the one with the subfolders containing the json files) into `BepInEx\config\Obeliskial_importing`
+7. Note: I am not certain about these install instructions. In the worst case, just copy `com.binbin.Tristan.dll` into the `BepInEx\plugins` folder, and the _Character_ folder (the one with the subfolders containing the json files) into `BepInEx\config\Obeliskial_importing`
 
 ## Installation (automatic)
 

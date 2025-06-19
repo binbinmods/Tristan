@@ -1,0 +1,15 @@
+{
+    "Card0": "owlknightpainfulscreech",
+    "Card1": "barrier",
+    "Card2": "shieldbash",
+    "Card3": "mindblast",
+    "Card4": "bluff",
+    "Card5": "",
+    "CardSpecial0": "",
+    "CardSpecial1": "",
+    "PackClass": "warrior",
+    "PackID": "tristan",
+    "PackName": "Tristan",
+    "PerkList": [],
+    "RequiredClass": "owlknight"
+}

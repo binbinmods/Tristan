@@ -2,10 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-	<RootNamespace>CharacterToReplace</RootNamespace>
-	<Product>CharacterToReplace</Product>
-    <AssemblyName>com.binbin.CharacterToReplace</AssemblyName>
-    <Description>CharacterToReplace, The SubclassToReplace</Description>
+	<RootNamespace>Tristan</RootNamespace>
+	<Product>Tristan</Product>
+    <AssemblyName>com.binbin.Tristan</AssemblyName>
+    <Description>Tristan, The Owl Knight</Description>
     <Version>0.1.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
@@ -45,7 +45,7 @@
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="../../../../plugins" />
-    <Copy SourceFiles="$(TargetPath)" DestinationFolder="../CharacterToReplace/BepInEx/plugins" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="../Tristan/BepInEx/plugins" />
     <Exec Command="/usr/bin/python3 &quot;$(ProjectDir)../ship_mod.py&quot;" />
 
   </Target>

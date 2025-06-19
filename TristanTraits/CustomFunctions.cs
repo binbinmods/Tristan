@@ -7,10 +7,10 @@ using Obeliskial_Essentials;
 using System.IO;
 using static UnityEngine.Mathf;
 using UnityEngine.TextCore.LowLevel;
-using static CharacterToReplace.Plugin;
+using static Tristan.Plugin;
 using System.Collections.ObjectModel;
 
-namespace CharacterToReplace
+namespace Tristan
 {
     public class CustomFunctions
     {
