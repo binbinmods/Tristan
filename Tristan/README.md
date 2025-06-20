@@ -1,8 +1,6 @@
 # Tristan, the Owl Knight
 
-A hero mod, introducing Tristan, a mage/healer who has been trapped in a mental cage. She goes on a journey to break out but has two very different ways of doing so overcoming the issues in a calm and focused way or forcefully breaking out of the cage through sheer will.
-
-This character was designed by @designer.
+A hero mod, introducing Tristan, a warrior/healer who specializes in block, mind damage, and crack.
 
 This currently does not include any events or quests related to Tristan other than those available to all heroes or all heroes of a specific class.
 
@@ -18,7 +16,7 @@ This mod relies on [Obeliskial Content](https://across-the-obelisk.thunderstore.
 
 ## Tristan Summary
 
-![Summary](https://raw.githubusercontent.com/binbinmods/Tristan/refs/heads/main/Assets/TristanSummary.png)
+![Summary](https://raw.githubusercontent.com/binbinmods/Tristan/refs/heads/main/Assets/tristanSummary.png)
 
 ## Installation (manual)
 
