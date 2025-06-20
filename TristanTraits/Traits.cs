@@ -193,6 +193,31 @@ namespace Tristan
                         __result.AuraDamageIncreasedPerStack4 = 1;
                     }
                     break;
+                case "crack":
+                    traitOfInterest = "owlknightcognitivecalm";
+                    // AppliesTo appliesTo = characterOfInterest.HaveTrait(trait2a) ? AppliesTo.Heroes : AppliesTo.ThisHero;
+                    if (IfCharacterHas(characterOfInterest, CharacterHas.Enchantment, traitOfInterest, AppliesTo.Monsters))
+                    {
+                        __result.AuraDamageType = Enums.DamageType.None;
+                        __result.AuraDamageIncreasedPerStack = 0;
+                        __result.AuraDamageType2 = Enums.DamageType.None;
+                        __result.AuraDamageIncreasedPerStack2 = 0;
+                        __result.AuraDamageType3 = Enums.DamageType.None;
+                        __result.AuraDamageIncreasedPerStack3 = 0;
+                        __result.AuraDamageType4 = Enums.DamageType.None;
+                        __result.AuraDamageIncreasedPerStack4 = 0;
+                        __result.HealAttackerPerStack = 1;
+                        __result.HealAttackerConsumeCharges = 1;
+                    }
+                    break;
+                case "insane":
+                    traitOfInterest = trait0;
+                    if (IfCharacterHas(characterOfInterest, CharacterHas.Trait, traitOfInterest, AppliesTo.Monsters))
+                    {
+                        __result.ResistModified2 = Enums.DamageType.Blunt;
+                        __result.ResistModifiedPercentagePerStack2 = -0.3f;
+                    }
+                    break;
             }
         }
 

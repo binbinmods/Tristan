@@ -2,12 +2,13 @@
 using BepInEx.Logging;
 using HarmonyLib;
 using static Obeliskial_Essentials.Essentials;
-using Obeliskial_Essentials;
+using static Obeliskial_Essentials.CardDescriptionNew;
 using System.IO;
 using UnityEngine;
 using System;
 using static Tristan.Traits;
 using BepInEx.Configuration;
+using Obeliskial_Essentials;
 
 namespace Tristan
 {
@@ -44,14 +45,26 @@ namespace Tristan
             RegisterMod(
                 _name: PluginInfo.PLUGIN_NAME,
                 _author: "binbin",
-                _description: "Character, the Owl Knight.",
+                _description: "Tristan, the Owl Knight.",
                 _version: PluginInfo.PLUGIN_VERSION,
                 _date: ModDate,
-                _link: @"https://github.com/binbinmods/Character",
+                _link: @"https://github.com/binbinmods/Tristan",
                 _contentFolder: "Tristan",
                 _type: ["content", "hero", "trait"]
             );
-            // apply patches            
+            // apply patches
+            string card = "owlknightcognitivecalm";
+            string text = $"{medsSpriteText("crack")} on monsters does not increase Damage, but Heals for 1 per charge when the target is hit.";
+            AddTextToCardDescription(text, TextLocation.ItemBeginning, card, includeAB: true);
+
+            card = "owlknightmindbreaker";
+            text = $"{medsSpriteText("crack")} on monsters increases Mind Damage by received 1 per charge.";
+            AddTextToCardDescription(text, TextLocation.ItemBeginning, card, includeAB: true);
+
+            card = "owlknightlowerguard";
+            text = $"{medsSpriteText("insane")} on monsters reduces Blunt Resistance by received 0.3% per charge.";
+            AddTextToCardDescription(text, TextLocation.ItemEnchantBeforeCast, card, includeAB: true);
+
 
             harmony.PatchAll();
         }
