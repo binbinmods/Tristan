@@ -83,7 +83,11 @@ namespace Tristan
                 string traitId = _trait;
 
                 LogDebug($"Handling Trait {traitId}: {traitName}");
-
+                if (_auxString == "insane")
+                {
+                    int amount = _character.HaveTrait(trait4a) ? 2 * _auxInt : 2;
+                    ApplyAuraCurseToAll("block", amount, AppliesTo.Heroes, _character);
+                }
 
 
 
@@ -98,7 +102,22 @@ namespace Tristan
                 // Repeat for Defense, Mind Spell, and Healing Spell.
                 string traitName = traitData.TraitName;
                 string traitId = _trait;
-
+                Enums.CardType[] cardTypes = [Enums.CardType.Attack, Enums.CardType.Defense, Enums.CardType.Mind_Spell, Enums.CardType.Healing_Spell];
+                foreach (Enums.CardType cardType in cardTypes)
+                {
+                    CardData highestCostCard = GetRandomHighestCostCard(cardType, heroHand);
+                    if (highestCostCard == null)
+                    {
+                        continue;
+                    }
+                    // int energy = highestCostCard.EnergyCost - highestCostCard.EnergyReductionPermanent - highestCostCard.EnergyReductionTemporal;
+                    // LogDebug($"Highest cost card: {highestCostCard.CardName} with energy {energy}, cost {highestCostCard.EnergyCost}, reduction {highestCostCard.EnergyReductionPermanent}, temporal reduction {highestCostCard.EnergyReductionTemporal}");
+                    if (highestCostCard != null && IsLivingHero(_character)) //energy >= 6 && 
+                    {
+                        int amountToReduce = _character.HaveTrait(trait4a) ? 3 : 2;
+                        ReduceCardCost(ref highestCostCard, _character, amountToReduce);
+                    }
+                }
             }
 
             else if (_trait == trait4a)
@@ -117,7 +136,12 @@ namespace Tristan
                 // Once per turn, when you play a Mind Spell, add a randomly upgraded Pandemonium to your hand (Costs 0 and Vanish). 
                 string traitName = traitData.TraitName;
                 string traitId = _trait;
-                LogDebug($"Handling Trait {traitId}: {traitName}");
+                if (CanIncrementTraitActivations(traitId) && _castedCard.HasCardType(Enums.CardType.Mind_Spell))
+                {
+                    LogDebug($"Handling Trait {traitId}: {traitName}");
+                    AddCardToHand("pandemonium");
+                    IncrementTraitActivations(traitId);
+                }
             }
 
         }
@@ -155,19 +179,8 @@ namespace Tristan
             string traitOfInterest;
             switch (_acId)
             {
-                // trait2a:
-                // Evasion on you stacks and increases All Damage by 1 per charge. 
-
-                // trait2b:
-                // Stealth on heroes increases All Damage by an additional 15% per charge and All Resistances by an additional 5% per charge.",
-
-                // trait 4a;
-                // Evasion on you can't be purged unless specified. 
-                // Stealth grants 25% additional damage per charge.",
-
-                // trait 4b:
-                // Heroes Only lose 75% stealth charges rounding down when acting in stealth.
-
+                // trait0:
+                // Fortify on you increases Mind Damage by 1 per charge and stacks to 50.
                 case "fortify":
                     traitOfInterest = trait0;
                     AppliesTo appliesTo = characterOfInterest.HaveTrait(trait2a) ? AppliesTo.Heroes : AppliesTo.ThisHero;
